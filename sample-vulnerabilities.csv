@@ -1,0 +1,21 @@
+Severity,CVE,Vulnerability Type,Description,Affected System,Status,Date Discovered
+Critical,CVE-2024-1234,SQL Injection,SQL Injection vulnerability in login form allows unauthorized database access,web-server-01,Open,2024-01-15
+Critical,CVE-2024-1235,Remote Code Execution,Unauthenticated RCE in file upload functionality,app-server-01,Open,2024-01-16
+High,CVE-2024-5678,Authentication Bypass,Weak authentication mechanism allows privilege escalation,web-server-02,In Progress,2024-01-14
+High,CVE-2024-5679,Remote Code Execution,Buffer overflow in image processing library,app-server-02,Open,2024-01-18
+High,CVE-2024-5680,Path Traversal,Directory traversal vulnerability in file download endpoint,web-server-01,Open,2024-01-12
+Medium,CVE-2024-9012,Cross-Site Scripting,Reflected XSS in search parameter,web-server-01,In Progress,2024-01-10
+Medium,CVE-2024-9013,Insecure Deserialization,Unsafe deserialization in API endpoint,api-server-01,Open,2024-01-20
+Medium,CVE-2024-9014,Session Fixation,Session tokens not properly invalidated on logout,web-server-02,Open,2024-01-11
+Medium,CVE-2024-9015,Cross-Site Scripting,Stored XSS in user profile fields,web-server-01,Closed,2024-01-08
+Low,CVE-2024-3456,Information Disclosure,Verbose error messages reveal system information,db-server-01,Open,2024-01-13
+Low,CVE-2024-3457,Security Misconfiguration,Default credentials still active on admin panel,web-server-03,Open,2024-01-17
+Low,CVE-2024-3458,Weak Cryptography,Use of MD5 for password hashing,auth-server-01,In Progress,2024-01-09
+Low,CVE-2024-3459,Information Disclosure,Directory listing enabled on web server,web-server-02,Open,2024-01-19
+Info,CVE-2024-7890,Missing Security Headers,X-Frame-Options header not set,web-server-01,Open,2024-01-05
+Info,CVE-2024-7891,Cookie Security,Cookies missing secure flag,web-server-02,Open,2024-01-06
+Critical,CVE-2024-1236,SQL Injection,Second-order SQL injection in reporting module,web-server-03,Open,2024-01-21
+High,CVE-2024-5681,XML External Entity,XXE vulnerability in XML parser,api-server-01,Open,2024-01-07
+Medium,CVE-2024-9016,CSRF,Missing CSRF tokens on state-changing operations,web-server-01,In Progress,2024-01-04
+Low,CVE-2024-3460,Rate Limiting,No rate limiting on login endpoint allows brute force,auth-server-01,Open,2024-01-03
+Medium,CVE-2024-9017,Broken Access Control,Horizontal privilege escalation in user API,api-server-01,Open,2024-01-22

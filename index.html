@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vulnerability Analyzer</h1>
+            <p>Upload your vulnerability CSV file to get an instant security summary</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <h3>Drop CSV file here or click to browse</h3>
+                <p>Supports CSV files with vulnerability data</p>
+                <input type="file" id="fileInput" accept=".csv" hidden>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Total Vulnerabilities</h3>
+                    <div class="card-value" id="totalVulns">0</div>
+                </div>
+                <div class="card critical">
+                    <h3>Critical</h3>
+                    <div class="card-value" id="criticalCount">0</div>
+                </div>
+                <div class="card high">
+                    <h3>High</h3>
+                    <div class="card-value" id="highCount">0</div>
+                </div>
+                <div class="card medium">
+                    <h3>Medium</h3>
+                    <div class="card-value" id="mediumCount">0</div>
+                </div>
+                <div class="card low">
+                    <h3>Low</h3>
+                    <div class="card-value" id="lowCount">0</div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h2>Vulnerability Breakdown</h2>
+                <div class="chart" id="severityChart"></div>
+
+                <h3>Top Vulnerability Types</h3>
+                <div id="topVulnTypes"></div>
+
+                <h3>Most Affected Systems</h3>
+                <div id="affectedSystems"></div>
+
+                <div class="data-table">
+                    <h3>All Vulnerabilities</h3>
+                    <div class="table-controls">
+                        <input type="text" id="searchInput" placeholder="Search vulnerabilities...">
+                        <button id="exportBtn">Export Summary</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="vulnTable">
+                            <thead>
+                                <tr id="tableHeader"></tr>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <button class="reset-btn" id="resetBtn">Analyze Another File</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
