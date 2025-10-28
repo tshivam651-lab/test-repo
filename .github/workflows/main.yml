@@ -1,0 +1,44 @@
+  - name: CrowdStrike FCS CLI GitHub Action
+  # You may pin to the exact commit or the version.
+  # uses: CrowdStrike/fcs-action@1c9e39fb4eb209b878147e3200fe993eb412fff8
+  uses: CrowdStrike/fcs-action@v1.0.4
+  with:
+    # CrowdStrike API Client ID for authentication
+    falcon_client_id: 
+    # CrowdStrike API region. Allowed values are us-1, us-2, eu-1, us-gov-1, us-gov-2
+    falcon_region: # default is us-1
+    # FCS CLI version to use
+    version: # optional
+    # Include results for the specified categories
+    categories: # optional
+    # Path to the scan configuration file
+    config: # optional
+    # Disable scanning of secrets and passwords in target files
+    disable_secrets_scan: # optional, default is false
+    # Exclude results for the specified categories, accepts a comma-separated list
+    exclude_categories: # optional
+    # Exclude paths from scan, accepts a comma-separated list (e.g. './sample-dir-to-omit/*,sample-file.tf')
+    exclude_paths: # optional
+    # Exclude results for the specified platforms, accepts a comma-separated list
+    exclude_platforms: # optional
+    # Exclude results for the specified severities, accepts a comma-separated list
+    exclude_severities: # optional
+    # Comma-separated list of which kind of results should return an exit code different from 0
+    fail_on: # optional
+    # Path to save the scan results
+    output_path: # optional, default is ./
+    # Path to local file, local directory or git repo to scan (e.g. ./my-local-dir, git::<git repo>, sample-file.tf)
+    path: # optional
+    # Include results for the specified platforms, accepts a comma-separated list (e.g Ansible,CloudFormation)
+    platforms: # optional
+    # Comma-separated list of project owners to notify (max 5)
+    project_owners: # optional
+    # Comma-separated list of formats in which reports are to be written (e.g. json,sarif)
+    report_formats: # optional
+    # Include results for the specified severities, accepts a comma-separated list (e.g. high,medium)
+    severities: # optional
+    # Timeout for the scan in seconds
+    timeout: # optional
+    # Upload scan results to the CrowdStrike Falcon Console
+    upload_results: # optional, default is false
+          
